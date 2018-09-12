@@ -1,0 +1,30 @@
+root
+|---userlist(Edit/Visit:Master)
+|	|---UsernameMD5(string)
+|	|---PasswordMD5(string)
+|	|---UsernameVig(string)
+|	|---Authority(int,1=Admin,2=User)
+|	|---UID(int,master)
+|	-
+|---problem(Edit:Admin,View:Admin/User)
+|	|---ProblemName(string)
+|	|---ProblemDescriptionFile(string,Format="%ProblemFilePath%\UID.zip)
+|	|   |---Description.txt
+|	|   |---*Photo.jpg
+|	|	|---Solve.txt
+|	|	-
+|	|---UID(int,master)
+|	|---Point(int)
+|	|---Rank(double)
+|	|---TotalRankPeoPle(int)
+|	|---CreateUser(string)
+|	-
+|---test(Generate:Admin,View:Admin/User)
+|	|---TestName
+|	|---ProblemNumber(int)
+|	|---TotalPoint(int)
+|	|---ProblemSet(string,Format="ProblemUID1,ProblemUID2..."
+|	|---CreateUser(string)
+|	|---UID(int,master)
+|	-
+-

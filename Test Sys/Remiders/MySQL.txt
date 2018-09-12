@@ -1,0 +1,39 @@
+show databases;
+
+use testsys;
+
+CREATE TABLE `userlist` (
+    `UsernameMD5` VARCHAR(50) NOT NULL,
+    `PasswordMD5` VARCHAR(50) NOT NULL,
+    `UsernameVig` VARCHAR(50) NOT NULL,
+    `Authority` TINYINT,
+    `UID` INT UNSIGNED AUTO_INCREMENT,
+    `LastLogin` TIMESTAMP,
+    PRIMARY KEY (`UID`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4;
+
+show columns from userlist;
+
+CREATE TABLE `problem` (
+    `ProblemName` VARCHAR(100) NOT NULL,
+    `ProblemDescriptionFile` VARCHAR(1024) NOT NULL,
+    `WorthPoint` INT unsigned,
+	`TotalRank` DOUBLE,
+    `TotalRankedPeople` INT unsigned,
+	`UploadPeople` VARCHAR(20) NOT NULL,
+    `UID` INT UNSIGNED AUTO_INCREMENT,
+    PRIMARY KEY (`UID`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4;
+
+show columns from problem;
+
+CREATE TABLE `test` (
+    `ProblemSet` VARCHAR(2048) NOT NULL,
+    `ProblemNumber` INT unsigned,
+    `TotalPoint` INT unsigned,
+	`CreateUser` VARCHAR(20) NOT NULL,
+    `UID` INT UNSIGNED AUTO_INCREMENT,
+    PRIMARY KEY (`UID`)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4;
+
+show columns from test;

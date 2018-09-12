@@ -1,0 +1,7 @@
+login:
+简单的登陆页面，依赖Resources文件夹内的userlist.txt，通过校检MD5是否存在与文件中登陆
+
+useredit：
+待添加功能：更改用户信息，包括密码、账户名、权限（管理员/用户）
+进入useredit需进行Master code校验，默认为MasterPiece25，校验成功后进入useredit功能（未完成）
+
