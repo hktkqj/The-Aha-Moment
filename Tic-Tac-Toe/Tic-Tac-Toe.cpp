@@ -169,9 +169,11 @@ int main()
 		if (rank()) {
 			if (rank()==1) printf("You lose\n");
 				else printf("You win\n");
+			system("pause");
 			return 0;
 		} else if (checkdraw()) {
 			printf("Draw\n");
+			system("pause");
 			return 0;
 		}
 		printf("Please select next move(row,column): ");
