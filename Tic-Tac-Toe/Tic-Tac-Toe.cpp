@@ -11,7 +11,6 @@ int state[4][4];
 //Clarify: There's no more than 3^9 state in Tic-Tac-Toe game, we used an array of [20000](int);
 //Statement: 0 stands for not solved, 1 stands for first-hand win and -1 vice versa
 //Sample: 123012321: 0 for not occupied, 1 for 'o' and 2 for 'x'
-bool visit[20000];
 map <int,int> save;
 int nextstep;
 
@@ -154,8 +153,6 @@ int And_Or_Tree_Search(int nowstate,bool First)
 int main()
 {
 	memset(state,0,sizeof(state));
-	memset(visit,0,sizeof(visit));
-	visit[0]=true;
 	And_Or_Tree_Search(0,true);
 	while (1) {
 		unzip(nextstep);
